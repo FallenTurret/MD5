@@ -1,11 +1,22 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 sourceCompatibility = 11
+mainClassName = 'hse.test1.Main'
 
 repositories {
     mavenCentral()
+}
+
+jar {
+    baseName = 'MD5'
+    manifest {
+        attributes(
+                'Main-Class': 'hse.test1.Main'
+        )
+    }
 }
 
 dependencies {
